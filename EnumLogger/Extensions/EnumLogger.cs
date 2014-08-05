@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Configuration;
 using System.Linq;
+using EnumLogger.Enums;
 using log4net;
-using enum_logger.Enums;
 
-namespace enum_logger.Extensions
+namespace EnumLogger.Extensions
 {
     // Looks up the logger and log level for each request
     // Performance for logger lookup is insignificant according to http://geekswithblogs.net/mapfel/archive/2011/08/02/146412.aspx
