@@ -18,10 +18,18 @@ namespace EnumLogger.Extensions
             log4net.GlobalContext.Properties.Clear();
         }
 
+        public static void Log<T>(
+            this Enum logEvent,
+            string message = "",
+            params Object[] messageParameters)
+        {
+            Log(logEvent, typeof(T), message, messageParameters);
+        }
+
         public static void Log (
             this Enum logEvent,
             object callingClass,
-            string message,
+            string message = "",
             params Object[] messageParameters)
         {
             var noOfExtraParameters = messageParameters.Length;
@@ -47,7 +55,8 @@ namespace EnumLogger.Extensions
             } 
         }
 
-        private static void LogViaLog4Net(object callingClass,
+        private static void LogViaLog4Net(
+            object callingClass,
             Enum logEvent,
             string message,
             Exception exception = null)
@@ -61,7 +70,7 @@ namespace EnumLogger.Extensions
             MDC.Set(EventId, enumValue.ToString());
             var enumName = logEvent.GetName();
             MDC.Set(EventName, enumName);
-            var logMessage = string.Join(enumName, ": ", message);
+            var logMessage = string.IsNullOrEmpty(message) ? enumName : string.Join(": ", enumName, message);
 
             switch (level)
             {
