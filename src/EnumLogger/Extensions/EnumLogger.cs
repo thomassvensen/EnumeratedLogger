@@ -67,7 +67,7 @@ namespace EnumLogger.Extensions
                 : LogManager.GetLogger(callingClass.GetType());
 
             var enumValue = Convert.ChangeType(logEvent, logEvent.GetType());
-            MDC.Set(EventId, enumValue.ToString());
+            MDC.Set(EventId, ((int)enumValue).ToString());
             var enumName = logEvent.GetName();
             MDC.Set(EventName, enumName);
             var logMessage = string.IsNullOrEmpty(message) ? enumName : string.Join(": ", enumName, message);
