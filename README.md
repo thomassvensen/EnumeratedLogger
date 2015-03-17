@@ -5,6 +5,9 @@ Available via [Nuget](https://www.nuget.org/packages/EnumeratedLogger).
 
 ## Release notes
 
+### 1.1.1
+ * This fixes the duplicated logging of the enum name, logging the enum integer id was the desired behaviour. (Thanks you @estien !)
+
 ### 1.1.0
  * Added ability to specify log class via type parameter (...Log&lt;T&gt;(msg)).
  * Added [LogToConsole] attribute to easily get log output when running tests.
