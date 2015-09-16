@@ -13,11 +13,6 @@ namespace EnumLogger.Extensions
         private const string EventId = "EventId";
         private const string EventName = "EventName";
 
-        static EnumLogger()
-        {
-            log4net.GlobalContext.Properties.Clear();
-        }
-
         public static void Log<T>(
             this Enum logEvent,
             string message = "",
