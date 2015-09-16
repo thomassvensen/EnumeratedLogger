@@ -5,6 +5,9 @@ Available via [Nuget](https://www.nuget.org/packages/EnumeratedLogger).
 
 ## Release notes
 
+### 1.1.2
+ * No longer removing GlobalContext.Properties because it can be very useful to know the host name where the log originated
+
 ### 1.1.1
  * This fixes the duplicated logging of the enum name, logging the enum integer id was the desired behaviour. (Thanks you @estien !)
 
