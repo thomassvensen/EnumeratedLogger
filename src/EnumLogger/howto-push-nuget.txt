@@ -1,0 +1,5 @@
+﻿1. Update version in AssemblyInfo.cs
+2. Compile
+3. In project folder - run nuget.exe pack
+4. In project folder - run nuget.exe push
+(Requires that API key is already set to the account at Nuget.org)

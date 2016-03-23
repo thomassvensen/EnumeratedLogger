@@ -9,9 +9,7 @@
     <projectUrl>https://github.com/thomassvensen/EnumeratedLogger</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Added ability to specify log class via type parameter (...Log&lt;T&gt;(msg)).
-Added [LogToConsole] attribute to easily get log output when running tests.
-Fixed issue with wrong order of ':' and enum name in output.
+    <releaseNotes>Upgraded to log4net 2.0.3
 </releaseNotes>
     <copyright>Copyright 2014</copyright>
   </metadata>
